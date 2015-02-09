@@ -15,46 +15,55 @@
 		</style>
 	</head>
 	
-	<body>	
-		
+	<body bgcolor="blue">	
 		<div data-role="page" id="series">
-		
-		<header data-role="header">
-			<h1>Series Updater</h1>
+				
+		<header data-role="header" data-position="fixed" >
+			<h1>Series Tracker</h1>
 		</header>	
+		
 		<nav data-role="navbar">	
-		<article data-role="content">
+			
+		<article data-role="content" >
 			<ul data-role="listview" data-filter="true">
 				<li>
 					<a href="#running-man">
 						<h1>Running Man</h1>
-						<img src="images/runningman.jpeg" alt="LED TV" />
+						<img src="images/runningman.jpeg" alt="runningman" />
 						<p>South Korean variety show</p>
 					</a>
 				</li>
 				<li>
 					<a href="#game-of-thrones">
 						<h1>Game of Thrones</h1>
-						<img src="images/gameofthrones.jpg" alt="DJ Panel" />
+						<img src="images/gameofthrones.jpg" alt="gameofthrones" />
 						<p>American fantasy drama television series</p>
 					</a>
 				</li>
 				<li>
 					<a href="#how-i-met-your-mother">
 						<h1>How I Met Your Mother</h1>
-						<img src="images/howimetyourmother.png" alt="Smart Phone" />
+						<img src="images/howimetyourmother.png" alt="howimetyourmother" />
 						<p>American sitcom</p>
 					</a>
 				</li>
 			</ul>
 		</article>
+		</nav>
 		
-		<footer data-role="footer" data-position="listview">
-			<nav>
-				<ul data-role="listview" data-filter="true">
-					<li><a href="home" data-icon="home">Home</a></li>
-					<li><a href="photos" data-icon="grid">Series</a></li>
-					<li><a href="info" data-icon="info">Info</a></li>
+
+		
+		<footer data-role="footer" data-position="fixed">
+		<nav data-role="navbar">
+			<ul data-role="listview">
+			<li><div align="center"><a href="add" data-icon="plus">Add a Serie</a></div></li>
+			</ul>
+		</nav>	
+			<nav data-role="navbar">
+				<ul data-role="listview">
+					<li><div align="center"><a href="home" data-icon="home">Home</a></div></li>
+					<li><div align="center"><a href="photos" data-icon="grid">Series</a></div></li>
+					<li><div align="center"><a href="info" data-icon="info">Info</a></div></li>
 				</ul>
 			</nav>
 		</footer>
@@ -66,30 +75,30 @@
 				
 			<article data-role="content">
 			<ul data-role="listview" data-filter="true">
+			<div align="center"><img src="images/runningman.jpeg" alt="runningman"/> </div>
 				<li>
-					<a href="#ep3">
+					<a href="#ep3" >
 						<h1>Episode 3</h1>
-						<p>test 3 </p>
+						<p>Guest: KARA's Hara, Song Jihyo, Lee Chunhee</p>
 					</a>
 					</li>
 				<li>
 					<a href="#ep2">
 						<h1>Episode 2</h1>
-						<p>test 32</p>
+						<p>Guest: KARA's Hara, Song Jihyo, Lee Chunhee</p>
 					</a>
 					</li>
 				<li>
 					<a href="#ep1">
 						<h1>Episode 1</h1>
-						<p> test2 </p>
+						<p>Guest: Lee Hyori, Hwang Jungeum</p>
 					</a>
 				</li>
 			</ul>
 		</article>
 				
-				<a href="#series" data-icon="grid" data-iconpos="notext">Photos</a>
-			</header>
-			<img src="images/led_tv.jpg" class="fullscreen" alt="LED TV" />
+		<a href="#series" data-icon="grid" data-iconpos="notext">Photos</a>
+		</header>
 		</div><!-- Page LED TV -->
 		
 		<div data-role="page" id="game-of-thrones">
@@ -98,6 +107,7 @@
 				
 				<article data-role="content">
 			<ul data-role="listview" data-filter="true">
+				<div align="center"><img src="images/gameofthrones.png" alt="gameofthrones"/> </div>
 				<li>
 					<a href="#ep3">
 						<h1>Episode 3</h1>
@@ -119,9 +129,8 @@
 			</ul>
 		</article>
 				
-				<a href="#series" data-icon="grid" data-iconpos="notext">Photos</a>
+			<a href="#series" data-icon="grid" data-iconpos="notext">Photos</a>
 			</header>
-			<img src="images/dj_panel.jpg" class="fullscreen" alt="DJ Panel" />
 		</div><!-- Page DJ competition -->
 		
 		<div data-role="page" id="how-i-met-your-mother">
@@ -130,6 +139,7 @@
 				
 			<article data-role="content">
 			<ul data-role="listview" data-filter="true">
+				<div align="center"><img src="images/howimetyourmother.png" alt="howimetyourmother"/> </div>
 				<li>
 					<a href="#ep3">
 						<h1>Episode 3</h1>
@@ -151,9 +161,8 @@
 			</ul>
 		</article>
 				
-				<a href="#series" data-icon="grid" data-iconpos="notext">Photos</a>
+			<a href="#series" data-icon="grid" data-iconpos="notext">Photos</a>
 			</header>
-			<img src="images/smart_phone.jpg" class="fullscreen" alt="Smart Phone" />
 		</div><!-- Page Smarthphones -->
 	</body>
 </html>
