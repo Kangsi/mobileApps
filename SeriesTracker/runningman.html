@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>		 
+		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+		<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+		<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+		<script src="app.js"></script>
+		<title>Series Tracker</title>
+		<meta charset="UTF-­‐8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<style type="text/css">
+			img.fullscreen {
+				max-height: 100%;
+				max-width: 100%;
+			}
+			
+		</style>
+	</head>
+
+	<body>
+		<div data-role="page" id="running-man">
+			<header data-role="header" data-position="fixed" data-add-back-btn="true">
+				<h1>Series tracker</h1>
+			</header>
+			
+			<article>		
+				<div align="center"><img src="images/runningman.jpeg" alt="howimetyourmother"/> </div>
+				<div data-role="content">								
+					<input type="text" name="episode" placeholder="How many episodes do you want to add?" onchange="add();">
+					<ul id="episodes" data-role="listview" data-inset="true"> </ul>	
+
+				</div>
+			</article>
+		</div>
+
+		<footer data-role="footer" data-position="fixed">
+			
+				<ul data-role="listview">
+					<li><div align="center"><a href="home" data-icon="home">Home</a></div></li>
+					<li><div align="center"><a href="photos" data-icon="grid">Series</a></div></li>
+					<li><div align="center"><a href="info" data-icon="info">Info</a></div></li>
+				</ul>
+	
+		</footer>
+	</body>
+</html>
+	
