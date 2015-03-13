@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html>
-	<head>		 
+	<head>
 		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
 		<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
 		<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 		<script src="app.js"></script>
-		<title>Series Tracker</title>
+		<title>Running man</title>
 		<meta charset="UTF-­‐8">
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 		<style type="text/css">
@@ -13,35 +13,83 @@
 				max-height: 100%;
 				max-width: 100%;
 			}
-			
+
 		</style>
 	</head>
 
 	<body>
 		<div data-role="page" id="running-man">
 			<header data-role="header" data-position="fixed" data-add-back-btn="true">
-				<h1>Series tracker</h1>
+				<h1>Running man</h1>
 			</header>
-			
-			<article>		
-				<div align="center"><img src="images/runningman.jpeg" alt="howimetyourmother"/> </div>
-				<div data-role="content">								
-					<input type="text" name="episode" placeholder="How many episodes do you want to add?" onchange="add();">
-					<ul id="episodes" data-role="listview" data-inset="true"> </ul>	
-
-				</div>
-			</article>
-		</div>
-
-		<footer data-role="footer" data-position="fixed">
-			
+			<nav data-role="navbar">
 				<ul data-role="listview">
-					<li><div align="center"><a href="home" data-icon="home">Home</a></div></li>
-					<li><div align="center"><a href="photos" data-icon="grid">Series</a></div></li>
-					<li><div align="center"><a href="info" data-icon="info">Info</a></div></li>
+					<li>
+						<div align="center"><img src="images/runningman.jpeg" alt="runningman"/>
+						</div>
+					</li>
+					<li>
+						<div>
+							<button id="hide">
+								Show running man info
+							</button>
+							<div id="par">
+								<p style="white-space: normal !important;">
+									Running Man is a South Korean variety show;
+									a part of SBS's Good Sunday lineup, along with K-pop Star 4.
+									Running Man was first aired on July 11, 2010. This show is
+									classified as an "urban action variety"; a never-before-seen
+									new genre of variety shows focused in an urban environment.
+									The MCs and guests complete missions in a landmark to win the race.
+									The show has since shifted to a more familiar reality-variety show
+									concept focused on games. It has garnered attention as being the
+									come-back program for Yoo Jae-suk, the main MC of the program,
+									after leaving Good Sunday's Family Outing in February 2010.
+									<script>
+										$(document).ready(function() {
+											$('#hide').on('click', function() {
+												if ($('#par').is(':visible')) {
+													$(this).text('Show running man info');
+													$('#par').hide();
+												} else {
+													$(this).text("Hide info");
+													$('#par').show();
+												}
+											});
+
+											$('#par').hide();
+											$('#hide').text('Show running man info');
+										});
+									</script>
+								</p>
+							</div>
+						</div>
+					</li>
 				</ul>
-	
-		</footer>
+			</nav>
+
+			<div data-role="content">
+				<input id="inputbox" type="text" id="add" name="addEpisode" placeholder="How many episodes do you want to add?" onchange="add();">
+				<ul id="episodes" data-role="listview" data-inset="true"></ul>
+				<input id="inputbox" type="text" id="delete" name="deleteEpisode" placeholder="How many episodes do you want to delete?" onchange="deleteEpisode();">
+			</div>
+
+			<footer data-role="footer" data-position="fixed">
+				<nav data-role="navbar">
+					<ul data-role="listview">
+						<li>
+							<div align="center">
+								<a href="index.html" data-icon="home">Home</a>
+							</div>
+						</li>
+						<li>
+							<div align="center">
+								<a href="" onClick="history.go(0)" data-icon="refresh">Refresh List</a>
+							</div>
+						</li>
+					</ul>
+				</nav>
+			</footer>
+		</div>
 	</body>
 </html>
-	

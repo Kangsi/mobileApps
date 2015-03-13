@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-	<head>		 
+	<head>
 		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
 		<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
 		<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
@@ -8,6 +8,7 @@
 		<title>Series Tracker</title>
 		<meta charset="UTF-­‐8">
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		
 		<style>
 			img.fullscreen {
 				max-height: 100%;
@@ -15,59 +16,56 @@
 			}
 		</style>
 	</head>
-	
-	<body bgcolor="blue">	
-		<div data-role="page" id="series">
-				
-		<header data-role="header" data-position="fixed" >
-			<h1>Series Tracker</h1>
-		</header>	
-		
-		<nav data-role="navbar">	
-			
-		<article data-role="content" >
-			<ul data-role="listview" data-filter="true">
-				<li>
-					<a href="runningman.html">
-						<h1>Running Man</h1>
-						<img src="images/runningman.jpeg" alt="runningman" />
-						<p>South Korean variety show</p>
-					</a>
-				</li>
-				<li>
-					<a href="gameofthrones.html" >
-						<h1>Game of Thrones</h1>
-						<img src="images/gameofthrones.jpg" alt="gameofthrones" />
-						<p>American fantasy drama television series</p>
-					</a>
-				</li>
-				<li>
-					<a href="howimetyourmother.html" >
-						<h1>How I Met Your Mother</h1>
-						<img src="images/howimetyourmother.png" alt="howimetyourmother" />
-						<p>American sitcom</p>
-					</a>
-				</li>
-			</ul>
-		</article>
-		</nav>
-		
 
-		
-		<footer data-role="footer" data-position="fixed">
-		<nav data-role="navbar">
-			<ul data-role="listview">
-			<li><div align="center"><a href="add" data-icon="plus">Add a Serie</a></div></li>
-			</ul>
-		</nav>	
+	<body>
+		<div data-role="page" id="series">
+
+			<header data-role="header" data-position="fixed" >
+				<h1>Series Tracker</h1>
+			</header>
+
 			<nav data-role="navbar">
-				<ul data-role="listview">
-					<li><div align="center"><a href="home" data-icon="home">Home</a></div></li>
-					<li><div align="center"><a href="photos" data-icon="grid">Series</a></div></li>
-					<li><div align="center"><a href="info" data-icon="info">Info</a></div></li>
-				</ul>
+
+				<article data-role="content" >
+					<ul data-role="listview" data-filter="true">
+						<li>
+							<a href="runningman.html"> <h1>Running Man</h1> <img src="images/runningman.jpeg" alt="runningman" />
+							<p>
+								South Korean variety show
+							</p> </a>
+						</li>
+						<li>
+							<a href="gameofthrones.html" > <h1>Game of Thrones</h1> <img src="images/gameofthrones.jpg" alt="gameofthrones" />
+							<p>
+								American fantasy drama television series
+							</p> </a>
+						</li>
+						<li>
+							<a href="howimetyourmother.html" > <h1>How I Met Your Mother</h1> <img src="images/howimetyourmother.png" alt="howimetyourmother" />
+							<p>
+								American sitcom
+							</p> </a>
+						</li>
+					</ul>
+				</article>
 			</nav>
-		</footer>
+
+			<footer data-role="footer" data-position="fixed">
+				<nav data-role="navbar">
+					<ul data-role="listview">
+						<li>
+							<div align="center">
+								<a href="" onclick=myFunction() data-icon="plus">Add a Serie</a>
+								<script>
+									function myFunction() {
+										alert("Under Construction!");
+									}
+								</script>
+							</div>
+						</li>
+					</ul>
+				</nav>
+			</footer>
 		</div>
 	</body>
 </html>

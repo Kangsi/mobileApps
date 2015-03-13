@@ -1,5 +1,0 @@
-label { background-color:#333; color:#FFF; }
-
-input[type="checkbox"]:checked + label {
-    background: brown;
-}

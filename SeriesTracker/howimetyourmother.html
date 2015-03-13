@@ -1,66 +1,101 @@
 <!DOCTYPE html>
 <html>
-	<head>		 
+	<head>
 		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
 		<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
 		<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
-		<title>Series Tracker</title>
+		<script src="app.js"></script>
+		<title>How I Met Your Mother</title>
 		<meta charset="UTF-­‐8">
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-		<style>
+		<style type="text/css">
 			img.fullscreen {
 				max-height: 100%;
 				max-width: 100%;
 			}
+
 		</style>
 	</head>
 
 	<body>
-		<div data-role="page" id="running-man">
+		<div data-role="page" id="how-i-met-your-mother">
 			<header data-role="header" data-position="fixed" data-add-back-btn="true">
-				<h1>Series tracker</h1>
+				<h1>How I Met Your Mother</h1>
 			</header>
-			
-			<article>
-			<ul data-role="listview" data-inset="true">
-				<div align="center"><img src="images/runningman.jpeg" alt="howimetyourmother"/> </div>
-				<li><a>
-					<input data-iconpos="right" name="checkbox-6" id="checkbox-6" type="checkbox">
-					<label for="checkbox-6">Episode 6<p>Kim Shin-young, Se7en, Son Dam-bi</p></label>
-				</a></li>
-				<li><a>
-					<input data-iconpos="right" name="checkbox-5" id="checkbox-5" type="checkbox">
-					<label for="checkbox-5">Episode 5<p>Jessica Jung, Nichkhun (2PM), Song Ji-hyo</p></label>
-				</a></li>
-				<li><a>
-					<input data-iconpos="right" name="checkbox-4" id="checkbox-4" type="checkbox">
-					<label for="checkbox-4">Episode 4<p>Jessica Jung, Nichkhun (2PM), Song Ji-hyo</p></label>
-				</a></li>
-				<li><a>
-					<input data-iconpos="right" name="checkbox-3" id="checkbox-3" type="checkbox">
-					<label for="checkbox-3">Episode 3<p>Goo Ha-ra, Lee Chun-hee, Song Ji-hyo</p></label>
-				</a></li>
-				<li><a>
-					<input data-iconpos="right" name="checkbox-2" id="checkbox-2" type="checkbox">
-					<label for="checkbox-2">Episode 2<p>Goo Ha-ra, Lee Chun-hee, Song Ji-hyo</p></label>
-				</a></li>
-				<li><a>
-					<input data-iconpos="right" name="checkbox-1" id="checkbox-1" type="checkbox">
-					<label for="checkbox-1">Episode 1<p>Guest: Hwang Jung-eum, Lee Hyo-ri</p></label>
-				</a></li>
-			</ul>
-			</article>
-		</div>
-
-		<footer data-role="footer" data-position="fixed">
 			<nav data-role="navbar">
 				<ul data-role="listview">
-					<li><div align="center"><a href="home" data-icon="home">Home</a></div></li>
-					<li><div align="center"><a href="photos" data-icon="grid">Series</a></div></li>
-					<li><div align="center"><a href="info" data-icon="info">Info</a></div></li>
+					<li>
+						<div align="center"><img src="images/howimetyourmother.png" alt="howimetyourmother"/>
+						</div>
+					</li>
+					<li>
+						<div>
+							<button id="hide">
+								Show how I met your mother info
+							</button>
+							<div id="par">
+								<p style="white-space: normal !important;">
+									How I Met Your Mother (often abbreviated to HIMYM) is an A
+									merican sitcom that originally ran on CBS from September 19
+									, 2005, to March 31, 2014. The series follows the main character
+									, Ted Mosby, and his group of friends in Manhattan. As a framing 
+									device, Ted, in the year 2030, recounts to his son and daughter 
+									the events that led him to meeting their mother.
+									<br>
+									The series was created by Craig Thomas and Carter Bays, who also 
+									served as the show's executive producers and were frequent writers. 
+									The series was loosely inspired by their friendship when they both 
+									lived in New York City.[1] Among the 208 episodes, there were only 
+									four directors: Pamela Fryman (196 episodes), Rob Greenberg 
+									(7 episodes), Michael Shea (4 episodes), and Neil Patrick Harris 
+									(1 episode).
+									<script>
+										$(document).ready(function() {
+											$('#hide').on('click', function() {
+												if ($('#par').is(':visible')) {
+													$(this).text('Show how I met your mother info');
+													$('#par').hide();
+												} else {
+													$(this).text("Hide info");
+													$('#par').show();
+												}
+											});
+
+											$('#par').hide();
+											$('#hide').text('Show how I met your mother info');
+										});
+									</script>
+								</p>
+							</div>
+						</div>
+					</li>
 				</ul>
 			</nav>
-		</footer>
+
+			<div data-role="content">
+				<input id="inputbox" type="text" id="add" name="addEpisode" placeholder="How many episodes do you want to add?" onchange="add();">
+				<ul id="episodes" data-role="listview" data-inset="true"></ul>
+				<input id="inputbox" type="text" id="delete" name="deleteEpisode" placeholder="How many episodes do you want to delete?" onchange="deleteEpisode();">
+			</div>
+
+			<footer data-role="footer" data-position="fixed">
+				<nav data-role="navbar">
+					<ul data-role="listview">
+						<li>
+							<div align="center">
+								<a href="index.html" data-icon="home">Home</a>
+							</div>
+						</li>
+						<li>
+							<div align="center">
+								<a href="" onClick="history.go(0)" data-icon="refresh">Refresh List</a>
+							</div>
+						</li>
+					</ul>
+				</nav>
+			</footer>
+		</div>
 	</body>
 </html>
-	
+
+									
